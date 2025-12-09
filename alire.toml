@@ -1,0 +1,11 @@
+name = "helloada"
+description = ""
+version = "0.1.0-dev"
+
+authors = ["younguk"]
+maintainers = ["younguk <example@example.com>"]
+licenses = "MIT"
+website = ""
+tags = ["2"]
+
+executables = ["helloada"]

@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cppdbg",
+            "name": "Ada: Debug main - src/main.adb",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/bin/helloada.exe",
+            "stopAtEntry": false,
+            "externalConsole": true,   // ← ★ 반드시 true
+            "args": [],
+            "MIMode": "gdb",
+            "MIDebuggerPath": "C:\\Users\\yulee\\AppData\\Local\\alire\\cache\\toolchains\\gnat_native_15.2.1_346e2e00\\bin\\gdb.exe",
+            "preLaunchTask": "ada: Build main - src/main.adb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Disable questions on multiple matches",
+                    "text": "set multiple-symbols cancel",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}
