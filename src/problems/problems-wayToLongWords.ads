@@ -30,5 +30,6 @@
 --i18n
 --p43s
 package Problems.WayToLongWords is
+   function GetWord(numberLetter:Integer) return String_Array;
    function run return Boolean;
 end Problems.WayToLongWords;
