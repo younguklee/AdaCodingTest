@@ -1,4 +1,4 @@
 procedure Hello is
 begin
-   null;
+   Ada.Text_IO.Put_Line("Hello Ada");
 end Hello;

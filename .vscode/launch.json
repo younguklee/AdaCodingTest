@@ -6,26 +6,37 @@
             "name": "Ada: Debug main - src/main.adb",
             "request": "launch",
             "cwd": "${workspaceFolder}",
-            "program": "${workspaceFolder}/bin/helloada.exe",
+            "program": "${workspaceFolder}/bin/helloada",
             "stopAtEntry": false,
-            "externalConsole": true,
-            "miDebuggerArgs": "-ex \"set new-console on\"",
             "args": [],
-            "MIMode": "gdb",
-            "MIDebuggerPath": "C:\\Users\\yulee\\AppData\\Local\\alire\\cache\\toolchains\\gnat_native_15.2.1_346e2e00\\bin\\gdb.exe",
             "preLaunchTask": "ada: Build main - src/main.adb",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                },
-                {
-                    "description": "Disable questions on multiple matches",
-                    "text": "set multiple-symbols cancel",
-                    "ignoreFailures": true
-                }
-            ]
+            "osx": {
+                "MIMode": "lldb",
+                "MIDebuggerPath": "/usr/bin/lldb"
+            },
+            "linux": {
+                "MIMode": "gdb",
+                "MIDebuggerPath": "gdb"
+            },
+            "windows": {
+                "program": "${workspaceFolder}/bin/helloada.exe",
+                "MIMode": "gdb",
+                "MIDebuggerPath": "C:\\Users\\yulee\\AppData\\Local\\alire\\cache\\toolchains\\gnat_native_15.2.1_346e2e00\\bin\\gdb.exe",
+                "externalConsole": true,
+                "miDebuggerArgs": "-ex \"set new-console on\"",
+                "setupCommands": [
+                    {
+                        "description": "Enable pretty-printing for gdb",
+                        "text": "-enable-pretty-printing",
+                        "ignoreFailures": true
+                    },
+                    {
+                        "description": "Disable questions on multiple matches",
+                        "text": "set multiple-symbols cancel",
+                        "ignoreFailures": true
+                    }
+                ]
+            }
         }
     ]
 }

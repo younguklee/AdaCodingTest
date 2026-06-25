@@ -16,6 +16,14 @@
             "args": ["-p", "-P", "helloada.gpr"],
             "group": "build",
             "problemMatcher": []
+        },
+        {
+            "label": "ada: Run main",
+            "type": "shell",
+            "command": "alr",
+            "args": ["run"],
+            "dependsOn": "ada: Build main - src/main.adb",
+            "problemMatcher": []
         }
-    ]   
+    ]
 }
